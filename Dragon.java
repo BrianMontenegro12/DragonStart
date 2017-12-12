@@ -12,7 +12,8 @@ public class Dragon
     private int y;
     private int size;
     private Color c;
-    private int health;
+    private int h;
+    private int cookie;
 
     /**
      * Default Constructor for objects of class Dragon
@@ -24,18 +25,24 @@ public class Dragon
         y = 50;
         size = 1;
         c = (Color.RED);
-        health = 25;
+        h = 25;
+        cookie = 0;
     }
     
     /**
      * Overloaded Constructors go here
      */
-    public Dragon(int x, int y, int size, Color C, int health){
+    public Dragon(int x, int y, int size, Color C){
         this.x = x;
         this.y = y;
         this.size = size;
         this.c = c;
-        this.health = health;
+    }
+    public void Health(int h){
+        this.h = h;
+        cookie = h + 5;
+        
+        
     }
 
     /** 
@@ -53,10 +60,11 @@ public class Dragon
         g.fillRect(x + size * 25, (y + size * 25) + size * 50, size * 10, size * 25);
         g.fillRect(x + size * 75, (y + size * 25) + size * 50, size * 10, size * 25);
         g.fillRect(x + size * 85, y + size * 25, size * 30, size * 10);
+        g.setColor(Color.BLACK);
+        g.fillRect(x + size * -150, y + size * 130, size * 100, size * 10);
+        g.setColor(Color.BLACK);
+        g.fillOval(x + size * -5, y + size * 180, size * 40, size * 40);
     }
-    public void Health(Graphics g){
-        
-    
     /**
      * Mutator Methods
      */
