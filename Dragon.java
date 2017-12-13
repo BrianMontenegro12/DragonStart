@@ -24,25 +24,21 @@ public class Dragon
         x = 50;
         y = 50;
         size = 1;
-        c = (Color.RED);
-        h = 25;
+        c = (Color.BLUE);
+        h = 10;
         cookie = 0;
     }
     
     /**
      * Overloaded Constructors go here
      */
-    public Dragon(int x, int y, int size, Color C){
+    public Dragon(int x, int y, int size, Color c, int h){
         this.x = x;
         this.y = y;
         this.size = size;
         this.c = c;
-    }
-    public void Health(int h){
         this.h = h;
-        cookie = h + 5;
-        
-        
+        cookie = h + 2;
     }
 
     /** 
@@ -61,9 +57,11 @@ public class Dragon
         g.fillRect(x + size * 75, (y + size * 25) + size * 50, size * 10, size * 25);
         g.fillRect(x + size * 85, y + size * 25, size * 30, size * 10);
         g.setColor(Color.BLACK);
-        g.fillRect(x + size * -150, y + size * 130, size * 100, size * 10);
-        g.setColor(Color.BLACK);
-        g.fillOval(x + size * -5, y + size * 180, size * 40, size * 40);
+        g.drawRect(x + size * -150, y + size * 130, size * 100, size * 10);
+        g.setColor(Color.GREEN);
+        g.fillRect(x + size * -149, y + size * 130, size * h, size * 9);
+        g.setColor(Color.YELLOW);
+        g.fillOval(x + size * -25, y + size * 100, size * 40, size * 40);//the cookie
     }
     /**
      * Mutator Methods
@@ -73,6 +71,6 @@ public class Dragon
      * toString
      */
     public String toString(){
-        return "x coor: " + x + " y coord: " + y + " size: " + size + " color: " + c;
+        return "x coor: " + x + " y coord: " + y + " size: " + size + " color: " + c + " health: " + h;
     }
 }

@@ -17,7 +17,7 @@ public class TestClass
      
        System.out.println(head);
        
-       Dragon body = new Dragon(300,300,2,Color.GREEN);
+       Dragon body = new Dragon(300,300,2,Color.GREEN,10);
        body.drawDragon(g);
     }
 }
