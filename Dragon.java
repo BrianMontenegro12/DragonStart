@@ -63,6 +63,13 @@ public class Dragon
         g.setColor(Color.YELLOW);
         g.fillOval(x + size * -25, y + size * 100, size * 40, size * 40);//the cookie
     }
+    public void cookieEat(Graphics g) throws InterruptedException 
+    {
+        g.setColor(Color.WHITE);
+        g.fillRect(x + size * -25, y + size * 100, size * 20, size * 20);
+        g.fillRect(x + size * -25, y + size * 120, size * 20, size * 20);
+        g.fillRect(x + size * -25, y + size * 120, size * 20, size * 20);        
+    }
     /**
      * Mutator Methods
      */

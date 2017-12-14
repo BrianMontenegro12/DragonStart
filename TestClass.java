@@ -7,7 +7,7 @@ import java.awt.*;
  */
 public class TestClass
 {
-   public static void main(String args[]){
+   public static void main(String args[]) throws InterruptedException{
        DrawingPanel panel = new DrawingPanel(800,800);
        Graphics g = panel.getGraphics();
        
@@ -19,5 +19,6 @@ public class TestClass
        
        Dragon body = new Dragon(300,300,2,Color.GREEN,10);
        body.drawDragon(g);
+       body.cookieEat(g);
     }
 }
