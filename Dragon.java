@@ -56,7 +56,7 @@ public class Dragon
         g.fillRect(x + size * 25, (y + size * 25) + size * 50, size * 10, size * 25);
         g.fillRect(x + size * 75, (y + size * 25) + size * 50, size * 10, size * 25);
         g.fillRect(x + size * 85, y + size * 25, size * 30, size * 10);
-        g.setColor(Color.BLACK);
+        g.setColor(Color.WHITE);
         g.drawRect(x + size * -150, y + size * 130, size * 100, size * 10);
         g.setColor(Color.GREEN);
         g.fillRect(x + size * -149, y + size * 130, size * h, size * 9);
@@ -65,7 +65,7 @@ public class Dragon
     }
     public void cookieEat(Graphics g) throws InterruptedException 
     {
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         g.fillRect(x + size * -25, y + size * 100, size * 20, size * 20);
         g.fillRect(x + size * -25, y + size * 120, size * 20, size * 20);
         g.fillRect(x + size * -25, y + size * 120, size * 20, size * 20);        
