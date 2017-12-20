@@ -34,7 +34,7 @@ public class Scene
         // initialise instance variables
         width = 0;
         size = 5;
-        x = 275;
+        x = 250;
         y = 50;
         f = 5;
         l = 5;
@@ -43,36 +43,40 @@ public class Scene
         g.setColor(Color.BLACK);
         g.fillRect(0,0,800,800);
         g.setColor(Color.WHITE);
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * l,5,5);
     }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 2),5,5);
     }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 3),5,5);
 }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 4),5,5);
 }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 5),5,5);
 }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 6),5,5);
 }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 7),5,5);
 }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 8),5,5);
 }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 9),5,5);
 }
-        for(int f = 5; f <= 75; f += 5){
+        for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * (l * 10),5,5);
 }
+        for(int f = 5; f <= 80; f += 5){
+            g.fillOval(x + size * f, y + size * (l * 11),5,5);
+}
+        g.setColor(Color.BLUE);
 }
     /**
      * An example of a method - replace this comment with your own
