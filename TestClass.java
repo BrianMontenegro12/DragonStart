@@ -20,29 +20,35 @@ public class TestClass
        head.drawDragon(g);
      
        
-       Dragon body = new Dragon(300,300,2,Color.GREEN,10);
+       Dragon body = new Dragon(300,300,2,Color.GREEN,"yes");
        body.drawDragon(g);
        body.cookieEat(g);
        Scanner input = new Scanner(System.in);
        ArrayList<Dragon> dragons = new ArrayList<Dragon>();
        
        int num;
+       String h;
        
-       do{
+        do{
            System.out.println("How many dragons ye want?");
            num = input.nextInt();
-       
-       
     }
     while(num <= 0);
     
         for(int i = 1; i <= num; i++){
-            Dragon temp = new Dragon(90*i + 25, 90*i + 50, 1, new Color(50*i, 50*i, 50*i), i);
-            dragons.add(temp);
+            System.out.println("Do you want your dragon to eat? Please say yes or no");
+            h = input.next();
+            if(h == "yes" || h == "no"){
+                Dragon temp = new Dragon(90*i + 25, 90*i + 50, 1, new Color(50*i, 50*i, 50*i), h);
+                dragons.add(temp);
+            }
 }
 
-for(int i = 0; i < dragons.size(); i++){
-    dragons.get(i).drawDragon(g);
+        for(int i = 0; i < dragons.size(); i++){
+            dragons.get(i).drawDragon(g);
+            if(h == "yes"){
+                dragons.get(i).cookieEat(g);
+            }
 }
 }
 }

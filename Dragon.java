@@ -12,7 +12,7 @@ public class Dragon
     private int y;
     private int size;
     private Color c;
-    private int h;
+    private String h;
     private int cookie;
 
     /**
@@ -25,20 +25,18 @@ public class Dragon
         y = 50;
         size = 1;
         c = (Color.BLUE);
-        h = 10;
-        cookie = 0;
+        h = "yes";
     }
     
     /**
      * Overloaded Constructors go here
      */
-    public Dragon(int x, int y, int size, Color c, int h){
+    public Dragon(int x, int y, int size, Color c, String h){
         this.x = x;
         this.y = y;
         this.size = size;
         this.c = c;
         this.h = h;
-        cookie = h + 2;
     }
 
     /** 
@@ -58,17 +56,32 @@ public class Dragon
         g.fillRect(x + size * 85, y + size * 25, size * 30, size * 10);
         g.setColor(Color.WHITE);
         g.drawRect(x + size * -150, y + size * 130, size * 100, size * 10);
-        g.setColor(Color.GREEN);
-        g.fillRect(x + size * -149, y + size * 130, size * h, size * 9);
         g.setColor(Color.YELLOW);
         g.fillOval(x + size * -25, y + size * 100, size * 40, size * 40);//the cookie
     }
     public void cookieEat(Graphics g) throws InterruptedException 
     {
         g.setColor(Color.BLACK);
+        Thread.sleep(1000);
+        g.setColor(Color.GREEN);
+        g.fillRect(x + size * -149, y + size * 130, size * 30, size * 9);
+        g.setColor(Color.BLACK);
         g.fillRect(x + size * -25, y + size * 100, size * 20, size * 20);
+        Thread.sleep(1000);
+        g.setColor(Color.GREEN);
+        g.fillRect(x + size * -149, y + size * 130, size * 60, size * 9);
+        g.setColor(Color.BLACK);
         g.fillRect(x + size * -25, y + size * 120, size * 20, size * 20);
-        g.fillRect(x + size * -25, y + size * 120, size * 20, size * 20);        
+        Thread.sleep(1000);
+        g.setColor(Color.GREEN);
+        g.fillRect(x + size * -149, y + size * 130, size * 90, size * 9);
+        g.setColor(Color.BLACK);
+        g.fillRect(x + size * -5, y + size * 100, size * 20, size * 20);
+        Thread.sleep(1000);
+        g.setColor(Color.GREEN);
+        g.fillRect(x + size * -149, y + size * 130, size * 100, size * 9);
+        g.setColor(Color.BLACK);
+        g.fillRect(x + size * -5, y + size * 120, size * 20, size * 20);
     }
     /**
      * Mutator Methods
