@@ -25,6 +25,8 @@ public class Scene
     private int y;
     private int f;
     private int l;
+    private int w;
+    private int h;
 
     /**
      * Constructor for objects of class Scene
@@ -41,7 +43,8 @@ public class Scene
     }
     public void drawBackground(Graphics g){
         g.setColor(Color.BLACK);
-        g.fillRect(0,0,800,800);
+        g.setColor(Color.BLACK);
+        g.fillRect(0,0,w,h);
         g.setColor(Color.WHITE);
         for(int f = 5; f <= 80; f += 5){
             g.fillOval(x + size * f, y + size * l,5,5);

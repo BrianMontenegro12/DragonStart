@@ -10,7 +10,14 @@ import java.util.Scanner;
 public class TestClass
 {
    public static void main(String args[]) throws InterruptedException{
-       DrawingPanel panel = new DrawingPanel(800,800);
+       Scanner dimensions = new Scanner(System.in);
+  
+           System.out.println("Enter the width of the panel");
+           int w = dimensions.nextInt();
+           System.out.println("Enter the height of the panel");
+           int h = dimensions.nextInt();
+       
+       DrawingPanel panel = new DrawingPanel(w,h);
        Graphics g = panel.getGraphics();
        
        Scene cool = new Scene();
@@ -43,12 +50,12 @@ public class TestClass
                 dragons.add(temp);
             }
 }
-
-        for(int i = 0; i < dragons.size(); i++){
+for(int i = 0; i < dragons.size(); i++){
             dragons.get(i).drawDragon(g);
-            if(h == "yes"){
+            if(int h == "yes"){
                 dragons.get(i).cookieEat(g);
             }
-}
+
+
 }
 }
